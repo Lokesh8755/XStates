@@ -14,27 +14,19 @@ const SelectLocation = ({
     isStateDropdownEnabled,
     isCityDropdownEnabled,
 }) => {
-    // Local states to display selected values
-    const [displayCountry, setDisplayCountry] = useState('');
-    const [displayState, setDisplayState] = useState('');
-    const [displayCity, setDisplayCity] = useState('');
-
     const handleCountryChange = (e) => {
         const selectedValue = e.target.value;
         setSelectedCountries(selectedValue);
-        setDisplayCountry(selectedValue);
     };
 
     const handleStateChange = (e) => {
         const selectedValue = e.target.value;
         setSelectedState(selectedValue);
-        setDisplayState(selectedValue);
     };
 
     const handleCityChange = (e) => {
         const selectedValue = e.target.value;
         setSelectedCity(selectedValue);
-        setDisplayCity(selectedValue);
     };
 
     return (
@@ -90,8 +82,8 @@ const SelectLocation = ({
 
             {/* Display Selected Values */}
             <div className="selectedValues">
-                {displayCity && displayState && displayCountry && (
-                    <p><b>You selected <h2 className="displayH2">{displayCity}</h2> </b>, {displayState}, {displayCountry}</p>
+                {selectedCity && selectedState && selectedCountries && (
+                    <p>You selected <span className="displayH2">{selectedCity}</span>, {selectedState}, {selectedCountries}</p>
                 )}
             </div>
         </div>
