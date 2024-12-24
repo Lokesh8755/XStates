@@ -17,7 +17,7 @@ function App() {
   const [isCityDropdownEnabled,setIsCityDropdownEnabled] = useState(false);
 
   const COUNTRIES_API = "https://crio-location-selector.onrender.com/countries";
-  const STATE_API = " https://crio-location-selector.onrender.com/country={countryName}/states";
+  const STATE_API = "https://crio-location-selector.onrender.com/country={countryName}/states";
   const CITY_API = "https://crio-location-selector.onrender.com/country={countryName}/state={stateName}/cities";
 
   //fetch countries on initial render

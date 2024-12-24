@@ -20,4 +20,12 @@
 #cityDropdown{
   padding:5px 1rem;
 }
+.selectedValues{
+  display:flex;
+  width:100%;
+  margin-left:30%
+}
+.displayH2{
+  display:inline;
+}
 
